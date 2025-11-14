@@ -1,10 +1,8 @@
-# Muzz Chat App
+#  Muzz Chat App
 
 A clean architecture Android chat application built using Jetpack Compose and Room DB. This project was developed to complete the Muzz Android exercise and implements a fully offline, two-user messaging interface.
 
----
-
-## Features
+**Features**
 
 - Chat between two fixed users ("Mo Salah" and "Sarah")
 - Fake replies for both users after sending a message
@@ -16,31 +14,22 @@ A clean architecture Android chat application built using Jetpack Compose and Ro
 - Muzz-style theme and message bubbles using Material3
 - Clean architecture: UI / ViewModel / Domain / Data layers
 
----
+**Tech Stack**
 
-## Tech Stack
+- Jetpack Compose (UI)
+- Kotlin Flow + StateFlow (Reactive state management)
+- Room DB (Offline persistence)
+- ViewModel (State handling)
+- Material3 (Theme and components)
 
-- **Jetpack Compose** (UI)
-- **Kotlin Flow + StateFlow** (Reactive state management)
-- **Room DB** (Offline persistence)
-- **ViewModel** (State handling)
-- **Material3** (Theme and components)
+**Folder Structure**
 
-
----
-
-## Folder Structure
-
-```
 ├── data/           # Room DB + repository
 ├── domain/         # Models and repository interface
 ├── ui/             # ViewModel, screens, composables
 ├── theme/          # Material3 custom theme and colors
-```
 
----
-
-## Requirements Followed
+**Requirements Followed**
 
 - Message list & text entry
 - Left/right aligned bubbles
@@ -51,9 +40,7 @@ A clean architecture Android chat application built using Jetpack Compose and Ro
 - Room-backed persistence
 - Fully themed with Material3 and Muzz styling
 
----
-
-## Improvements for Future
+**Improvements for Future**
 
 - Message search or filters
 - Message editing/deleting
