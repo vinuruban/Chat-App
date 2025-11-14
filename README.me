@@ -1,0 +1,66 @@
+# Muzz Chat App
+
+A clean architecture Android chat application built using Jetpack Compose and Room DB. This project was developed to complete the Muzz Android exercise and implements a fully offline, two-user messaging interface.
+
+---
+
+## Features
+
+- Chat between two fixed users ("Mo Salah" and "Sarah")
+- Fake replies for both users after sending a message
+- Persistent message history using Room
+- Smart grouping:
+  - Timestamp divider if messages are more than 1 hour apart
+  - Small spacing if the same user sends messages within 20s
+- Crossfade animation when switching users
+- Muzz-style theme and message bubbles using Material3
+- Clean architecture: UI / ViewModel / Domain / Data layers
+
+---
+
+## Tech Stack
+
+- **Jetpack Compose** (UI)
+- **Kotlin Flow + StateFlow** (Reactive state management)
+- **Room DB** (Offline persistence)
+- **ViewModel** (State handling)
+- **Material3** (Theme and components)
+
+
+---
+
+## Folder Structure
+
+```
+├── data/           # Room DB + repository
+├── domain/         # Models and repository interface
+├── ui/             # ViewModel, screens, composables
+├── theme/          # Material3 custom theme and colors
+```
+
+---
+
+## Requirements Followed
+
+- Message list & text entry
+- Left/right aligned bubbles
+- Timestamp headers (> 1hr apart)
+- Message grouping logic (same sender, < 20s)
+- Local-only chat logic with fake replies
+- User toggle (Crossfade)
+- Room-backed persistence
+- Fully themed with Material3 and Muzz styling
+
+---
+
+## Improvements for Future
+
+- Message search or filters
+- Message editing/deleting
+- Add a shimmer loading effect while messages load to enhance perceived performance
+- Introduce per-message animations or bubble transitions using AnimatedContent
+- Migrate from manual DI to Hilt for cleaner dependency injection and ViewModel provisioning
+- Add unit tests for:
+  - Timestamp section logic (isOverAnHour)
+  - Message grouping logic (isWithin20Seconds, same sender)
+- Improve UI accessibility (dynamic font size, color contrast adjustments)
